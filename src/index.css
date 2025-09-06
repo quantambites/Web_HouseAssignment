@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@plugin "tailwind-scrollbar-hide";
+
+/* Enable `.dark` class-based dark mode */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Theme Tokens (Tailwind v4 way) */
+@theme {
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  /* Primary colors */
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+}
+
+/* Custom Animations */
+@utility animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
+}
+@utility animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}
+
+@keyframes accordion-down {
+  from { height: 0 }
+  to { height: var(--radix-accordion-content-height) }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height) }
+  to { height: 0 }
+}
+
+/* Light mode defaults */
+:root {
+  --border: 0 0% 95%;              /* same as #F1F1F1 */
+  --input: 0 0% 80%;               /* same as #CCCCCC */
+  --ring: 0 0% 100%;               /* same as #FFFFFF */
+  --background: 0 0% 100%;
+      /* same as #1E3A8A */
+  --foreground: 0 0% 0%;
+  --primary: 221 83% 28%;          /* same as #1E3A8A */
+  --primary-foreground: 0 0% 100%;
+}
+
+/* Dark mode overrides */
+.dark {
+  --border: 0 0% 40%;
+  --input: 0 0% 15%;
+  --ring: 210 100% 70%;
+  --background: 0 0% 5%;
+  --foreground: 0 0% 95%;
+  --primary: 210 100% 60%;
+  --primary-foreground: 0 0% 10%;
+}

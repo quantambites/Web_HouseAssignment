@@ -76,7 +76,7 @@ Web_HouseAssignment (Propbot)/
 ---
 ### 🔗 Live Project
 
-[https://propbotassignment.netlify.app/shop/home](https://propbotassignment.netlify.app/shop/home)
+[https://propbotassignment.netlify.app/](https://propbotassignment.netlify.app/)
 
 
 
@@ -89,4 +89,13 @@ Web_HouseAssignment (Propbot)/
 
 <p align="center">
   <img src="login.png" alt="App Screenshot" width="500"/>
+</p>
+
+<p align="center">
+  <img src="featured.png" alt="App Screenshot" width="500"/>
+</p>
+
+
+<p align="center">
+  <img src="about.png" alt="App Screenshot" width="500"/>
 </p>

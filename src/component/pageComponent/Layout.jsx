@@ -1,9 +1,8 @@
 import React , {useState} from 'react'
-import Signout from '../authComponent/Signout'
 import { Outlet } from 'react-router-dom'
-import Header from './header'
-import Profile from './Profile'
-import Footer from './Footer'
+import Header from '@/component/pageComponent/Header'
+import Profile from '@/component/pageComponent/Profile'
+import Footer from '@/component/pageComponent/Footer'
 
 const Layout = () => {
     const [profileActive , setProfileActive] = useState(false)

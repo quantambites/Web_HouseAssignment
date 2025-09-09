@@ -37,7 +37,7 @@
 
 /* Light mode defaults */
 :root {
-  --border: 0 0% 95%;              /* same as #F1F1F1 */
+  --border: 0 0% 59%;              /* same as #F1F1F1 */
   --input: 0 0% 80%;               /* same as #CCCCCC */
   --ring: 0 0% 100%;               /* same as #FFFFFF */
   --background: 0 0% 100%;

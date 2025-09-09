@@ -1,7 +1,8 @@
 import React from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import Layout from '@/assets/layout.png';
-import {  House  } from "lucide-react";
+import Logo from "@/assets/logo.png"; 
+import arrow from "@/assets/arrow1.png"; 
 
 const AuthLayout = () => {
   const navigate = useNavigate();
@@ -10,28 +11,34 @@ const AuthLayout = () => {
     <div className="relative w-full h-screen bg-gray-100 overflow-hidden">
 
       {/* Overlay Header */}
-      <header className="absolute top-0 left-0 right-0 bg-white bg-opacity-90 shadow p-4 flex items-center justify-between z-50">
+      <header className="absolute top-0 left-0 right-0 bg-white bg-opacity-90 shadow-lg p-4 flex items-center justify-between z-50">
         {/* Left: Back to Homepage */}
         <button
-          className="text-primary bg-white border border-primary px-4 py-2 rounded-3xl hover:bg-primary hover:text-white"
+          className="text-gray-800 bg-white border border-primary px-4 py-2 rounded-3xl hover:bg-primary hover:text-white flex flex-row gap-2"
           onClick={() => navigate('/shop/home')}
         >
-          ⟵ Back to Homepage
+          <img
+            src={arrow}
+            alt=">"
+            className="w-6 h-6 object-contain rotate-180 filter invert-0 brightness-0 saturate-100 hue-rotate-180"
+          />
+          <span>Back to Homepage</span>
         </button>
 
         {/* Center: Logo */}
           <div className=" flex items-center gap-2 ">
-              <span className="text-xl"><House size={20}/></span>
-              <span className="font-semibold text-lg">PropBot</span>
+            <img src={Logo} alt="PropBot Logo" className="w-6 h-6 object-contain" />
+            <span className="font-bold text-xl">PropBot</span>
           </div>
 
 
         {/* Right: About Us */}
         <button
-          className="bg-primary text-white px-4 py-2 rounded-3xl hover:bg-white hover:text-primary border border-primary"
+          className="bg-primary text-white px-4 py-2 rounded-3xl hover:bg-white hover:text-primary border border-primary flex flex-row gap-2"
           onClick={() => navigate('/shop/about')}
         >
-          About Us ➔
+          <span>About Us</span>
+          <img src={arrow} alt=">" className="w-6 h-6 object-contain" />
         </button>
       </header>
 
@@ -40,16 +47,16 @@ const AuthLayout = () => {
         <div className="bg-white shadow-lg rounded-lg flex w-full max-w-8xl h-[calc(100vh-64px)]">
 
           {/* Left Side: Form */}
-          <div className="w-full md:w-1/3 p-8 flex items-center justify-center">
+          <div className="w-full md:w-3/7 p-8 flex items-center justify-center">
             <Outlet /> {/* SignIn / SignUp form */}
           </div>
 
           {/* Right Side: Image */}
-          <div className="hidden md:block w-2/3">
+          <div className="hidden md:block w-4/7 py-10">
             <img
               src={Layout}
               alt="Modern Home"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover rounded-l-4xl"
             />
           </div>
 

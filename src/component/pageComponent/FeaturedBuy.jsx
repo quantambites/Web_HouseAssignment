@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { MapPin } from "lucide-react";
+import Arrow from "@/assets/arrow2.png"
+import Location from "@/assets/location3.png"
+import Save from "@/assets/save.png"
 
 // Fallback images
 import fallback1 from "@/assets/random_1.jpg";
@@ -14,12 +17,12 @@ const PropertyCard = ({ property }) => {
   const [imgSrc, setImgSrc] = useState(property.safeImage);
 
   return (
-    <div className="relative rounded-2xl overflow-hidden shadow-lg">
+    <div className="relative rounded-3xl shadow-lg ">
       {/* Background Image */}
       <img
         src={imgSrc}
         alt={property.name}
-        className="w-full h-[320px] object-cover"
+        className="w-full h-[460px] object-cover rounded-3xl"
         onError={() =>
           setImgSrc(
             fallbackImages[Math.floor(Math.random() * fallbackImages.length)]
@@ -28,13 +31,14 @@ const PropertyCard = ({ property }) => {
       />
 
       {/* Overlay Card */}
-      <div className="absolute bottom-4 left-4 right-4 bg-white rounded-xl shadow-lg p-4">
+      <div className="absolute bottom-4 left-4 right-4 bg-white rounded-xl shadow-lg p-4 -mb-20 min-h-4xl">
         {/* Location */}
         <div className="flex items-center gap-2 text-gray-600 font-medium mb-2">
-          <MapPin size={16} className="text-primary" />
+          <img src={Location} alt="/" className="w-6 h-6 object-contain" />
           <span>
             {property.city}, {property.state}
           </span>
+          <img src={Save} alt="/" className="w-6 h-6 object-contain ml-auto" />
         </div>
 
         {/* Description */}
@@ -44,7 +48,7 @@ const PropertyCard = ({ property }) => {
         </p>
 
         {/* Footer */}
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center border-t border-border pt-4 ">
           <p className="font-bold text-lg text-gray-800">{property.price}</p>
           <button className="bg-primary text-white px-4 py-2 rounded-full text-sm shadow hover:bg-primary/90">
             Know More
@@ -79,20 +83,21 @@ export default function FeaturedProperty() {
   }, []);
 
   return (
-    <section className="py-12 px-6 md:px-12">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-12 px-8 md:px-14 pb-32">
+      <div className="max-w-full mx-auto">
         {/* Header */}
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-2xl md:text-3xl font-bold text-primary">
             Featured Property
           </h2>
-          <button className="px-4 py-2 border border-primary text-primary rounded-full text-sm hover:bg-primary hover:text-white transition">
-          See 268 New Projects →
+          <button className="px-4 py-2 border border-primary text-primary rounded-full text-sm hover:bg-primary hover:text-white transition flex flex-row gap-2 items-center">
+            <span>See 268 New Projects</span>
+            <img src={Arrow} alt="/" className="w-2 h-2 object-contain" />
           </button>
         </div>
 
         {/* Featured Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {featured.map((property) => (
             <PropertyCard key={property.id} property={property} />
           ))}

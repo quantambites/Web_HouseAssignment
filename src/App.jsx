@@ -6,6 +6,7 @@ import AuthRegister from "./pages/authPages/signup";
 import ShoppingLayout from "@/component/pageComponent/Layout";
 import Home from "./pages/home";
 import Buy from "./pages/buy";
+import Sell from "./pages/sell";
 import Rent from "./pages/rent";
 import About from "./pages/about";
 import Contact from "./pages/contact";
@@ -49,6 +50,7 @@ const App = () => {
         <Route path="home" element={<Home />} />
         <Route path="buy" element={<Buy />} />
         <Route path="rent" element={<Rent />} />
+        <Route path="sell" element={<Sell />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
       </Route>

@@ -2,24 +2,27 @@ import React from "react";
 import foot1 from "@/assets/foot_1.jpg"; // adjust path as needed
 import foot2 from "@/assets/foot_2.jpg";
 import { Wallet, ShieldCheck, MapPin } from "lucide-react";
+import Budget from "@/assets/budget.png"
+import Map from "@/assets/map.png"
+import Trusted from "@/assets/trusted.png"
 
 export default function PropertyFeatures() {
   return (
-    <div className="flex justify-center items-center py-16 bg-white px-6 md:px-16">
-      <div className="w-full max-w-7xl flex flex-col md:flex-row items-center gap-12">
+    <div className="flex justify-center items-center py-16 bg-white px-15 md:px-44 pb-32">
+      <div className="w-full  flex flex-col md:flex-row items-center gap-12">
         {/* Left side - Images */}
         <div className="relative flex-1 flex justify-center md:justify-start">
           {/* Back Image */}
           <img
             src={foot1}
             alt="Modern House"
-            className="w-80 h-85 object-cover rounded-md shadow-md border-4 border-white relative z-0"
+            className="w-95 h-100 object-cover rounded-md shadow-md border-4 border-gray-200 relative z-0"
           />
           {/* Front Image */}
           <img
             src={foot2}
             alt="Luxury House"
-            className="w-60 h-60 object-cover rounded-md shadow-md border-4 border-white absolute top-34 left-36 z-10"
+            className="w-75 h-75 object-cover rounded-md shadow-md border-4 border-gray-200 absolute top-42 left-46 z-10"
           />
         </div>
 
@@ -32,34 +35,34 @@ export default function PropertyFeatures() {
           {/* Features list */}
           <div className="space-y-6">
             <div className="flex items-start gap-4">
-              <Wallet className="text-primary w-7 h-7 mt-1" />
+              <img src={Budget} alt="PropBot Logo" className="w-8 h-8 object-contain" />
               <div>
-                <h3 className="font-bold text-lg text-primary">Budget Friendly</h3>
-                <p className="text-gray-600 text-sm">
-                  Lorem ipsum dolor sit amet consectetur. Venenatis sed ac
-                  aenean tempus. Lectus quis pretium varius iaculis sed.
+                <h3 className="font-semibold text-2xl text-primary">Budget Friendly</h3>
+                <p className="text-gray-600 text-lg">
+                  Lorem ipsum dolor sit amet consectetur. <br />Venenatis sed ac
+                  aenean tempus.<br /> Lectus quis pretium varius iaculis sed.
                 </p>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
-              <ShieldCheck className="text-primary w-7 h-7 mt-1" />
+              <img src={Trusted} alt="PropBot Logo" className="w-8 h-8 object-contain" />
               <div>
-                <h3 className="font-bold text-lg text-primary">Trusted By Thausand</h3>
-                <p className="text-gray-600 text-sm">
-                  Lorem ipsum dolor sit amet consectetur. Venenatis sed ac
-                  aenean tempus. Lectus quis pretium varius iaculis sed.
+                <h3 className="font-semibold text-2xl text-primary">Trusted By Thausand</h3>
+                <p className="text-gray-600 text-lg">
+                  Lorem ipsum dolor sit amet consectetur. <br />Venenatis sed ac
+                  aenean tempus.<br /> Lectus quis pretium varius iaculis sed.
                 </p>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
-              <MapPin className="text-primary w-7 h-7 mt-1" />
+              <img src={Map} alt="PropBot Logo" className="w-8 h-8 object-contain" />
               <div>
-                <h3 className="font-bold text-lg text-primary">Prime Location</h3>
-                <p className="text-gray-600 text-sm">
-                  Lorem ipsum dolor sit amet consectetur. Venenatis sed ac
-                  aenean tempus. Lectus quis pretium varius iaculis sed.
+                <h3 className="font-semibold text-2xl text-primary">Prime Location</h3>
+                <p className="text-gray-600 text-lg">
+                  Lorem ipsum dolor sit amet consectetur. <br />Venenatis sed ac
+                  aenean tempus.<br /> Lectus quis pretium varius iaculis sed.
                 </p>
               </div>
             </div>

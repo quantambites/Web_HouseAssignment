@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { MapPin, Star } from "lucide-react";
+import Location from "@/assets/location2.png"; 
 
 // Import fallback images
 import random1 from "@/assets/random_1.jpg";
@@ -58,8 +59,8 @@ export default function PropertyListing() {
       <div className="flex flex-col flex-1 p-4 space-y-3">
         {/* Location */}
         <div className="flex justify-between items-center">
-          <div className="flex items-center gap-2 text-gray-500 text-sm w-[70%] truncate">
-            <MapPin size={16} />
+          <div className="flex items-center gap-2 text-gray-400 text-sm w-[70%] truncate">
+            <img src={Location} alt="s" className="w-6 h-6 object-contain " />       
             <span className="truncate">{property.city}, {property.state}</span>
           </div>
           <div className="flex items-center gap-1 text-yellow-500 text-sm">
@@ -75,7 +76,7 @@ export default function PropertyListing() {
         </p>
 
         {/* Footer pinned to bottom */}
-        <div className="flex justify-between items-center mt-auto pt-2">
+        <div className="flex justify-between items-center mt-auto py-2">
           <button className="bg-primary text-white px-4 py-1 rounded shadow hover:bg-primary/90">
             {type === "sale" ? "Buy Now" : "Rent Now"}
           </button>
@@ -87,8 +88,8 @@ export default function PropertyListing() {
 };
 
   return (
-    <div className=" py-12 px-6 md:px-12">
-      <div className="max-w-8xl mx-auto space-y-16 pl-16">
+    <div className=" py-12 px-8 md:px-14">
+      <div className="max-w-8xl mx-auto space-y-16 ">
         {/* Sale Section */}
         <section>
           <div className="flex justify-between items-center mb-6">
@@ -96,9 +97,9 @@ export default function PropertyListing() {
               <h2 className="text-2xl md:text-3xl font-bold text-primary">
                 Best Properties Available For Sale
               </h2>
-              <p className="text-gray-600 text-sm mt-2">
+              <p className="text-gray-600 text-lg mt-2">
                 Browse our top-rated properties for sale, featuring premium
-                listings tailored to your needs. Find your dream home today!
+                listings tailored to <br /> your needs. Find your dream home today!
               </p>
             </div>
             <button className="bg-primary text-white px-6 py-2 rounded-full shadow hover:bg-primary/90">
@@ -120,9 +121,9 @@ export default function PropertyListing() {
               <h2 className="text-2xl md:text-3xl font-bold text-primary">
                 Find The Perfect Rental Home
               </h2>
-              <p className="text-gray-600 text-sm mt-2">
+              <p className="text-gray-600 text-lg mt-2">
                 Browse our top-rated properties for rent, featuring premium
-                listings tailored to your needs. Find your dream home today!
+                listings tailored to <br /> your needs. Find your dream home today!
               </p>
             </div>
             <button className="bg-primary text-white px-6 py-2 rounded-full shadow hover:bg-primary/90">

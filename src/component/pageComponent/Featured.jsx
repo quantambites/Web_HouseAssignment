@@ -3,22 +3,24 @@ import featured_l from "@/assets/feature_L.jpg";
 import featured_m from "@/assets/feature_M.jpg";
 import featured_s1 from "@/assets/feature_S_1.jpg";
 import featured_s2 from "@/assets/feature_S_2.jpg";
+import Arrow from "@/assets/arrow2.png"
 
 const Featured = () => {
   return (
-    <section className="max-w-7xl mx-auto px-6 py-12">
+    <section className="max-w-full mx-auto px-8 md:px-14 py-12 ">
       {/* Header Row */}
       <div className="flex items-center justify-between mb-8">
         <h2 className="text-2xl md:text-3xl font-bold text-primary mb-2">Featured Property</h2>
-        <button className="px-4 py-2 border border-primary text-primary rounded-full text-sm hover:bg-primary hover:text-white transition">
-          See 268 New Projects →
+        <button className="px-4 py-2 border border-primary text-primary rounded-full text-sm hover:bg-primary hover:text-white transition flex flex-row gap-2 items-center">
+          <span>See 268 New Projects</span>
+          <img src={Arrow} alt="/" className="w-2 h-2 object-contain" />
         </button>
       </div>
 
       {/* Grid Section */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 ">
         {/* Large Left Image */}
-        <div className="md:col-span-2 relative rounded-xl overflow-hidden">
+        <div className="md:col-span-2 relative rounded-lg overflow-hidden h-full" >
           <img
             src={featured_l}
             alt="Featured Property"

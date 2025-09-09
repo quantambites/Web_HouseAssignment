@@ -27,20 +27,25 @@ const services = [
 const Services = () => {
   return (
     <section className="py-12 px-6 bg-background ">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-2xl font-bold text-primary mb-2">
+      <div className="max-w-full px-8 md:px-14 mx-auto text-center">
+        <h2 className="text-3xl font-bold text-primary mb-2">
           What We Do?
         </h2>
-        <p className="text-gray-500 mb-10">
-          Helping you find, buy, and rent the perfect property with ease.
+        <p className="text-gray-500 mb-10 text-lg">
+          Helping you find, buy, and rent the perfect <br />property with ease.
         </p>
 
         {/* cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pt-2">
           {services.map((service, index) => (
-            <div
+                        <div
               key={index}
-              className="bg-gray-100 shadow-md rounded-xl p-6 flex flex-col items-center text-center hover:shadow-lg transition"
+              className={`rounded-lg p-6 flex flex-col items-center text-center transition border border-gray-100
+                ${
+                  index === 1
+                    ? "bg-white shadow-lg" // always hovered
+                    : "bg-gray-100 "
+                }`}
             >
               <div className="w-16 h-16 flex items-center justify-center rounded-full bg-gray-300 mb-4">
                 {service.icon}

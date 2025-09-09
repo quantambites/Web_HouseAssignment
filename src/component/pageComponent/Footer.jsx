@@ -1,5 +1,5 @@
 import React from "react";
-import {  House  } from "lucide-react";
+import Logo from "@/assets/logo.png"; 
 
 const Footer = () => {
   return (
@@ -27,11 +27,11 @@ const Footer = () => {
       </div>
 
       {/* Bottom Section */}
-      <div className="border-t border-white/20 pt-4 flex flex-col md:flex-row justify-between items-center text-sm">
+      <div className=" pt-4 pl-8 flex flex-col md:flex-row justify-between items-center text-sm">
         {/* Left - Logo */}
         <div className="flex items-center gap-2 mb-3 md:mb-0">
-          <span className="text-xl"><House size={15}/></span>
-          <span className="font-semibold">PropBot</span>
+          <img src={Logo} alt="PropBot Logo" className="w-6 h-6 object-contain filter invert" />
+          <span className="font-bold text-md">PropBot</span>
         </div>
 
         {/* Center - Links */}

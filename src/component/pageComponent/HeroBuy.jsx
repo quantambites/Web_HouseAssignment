@@ -1,6 +1,6 @@
 import React from "react";
 import { Search , LocateFixed , House , ChevronDown , SquareArrowOutUpRight  } from "lucide-react";
-import heroImg from "@/assets/hero_b.png"; // use your actual hero image
+import heroImg from "@/assets/hero_buy.png"; // use your actual hero image
 
 const Hero = () => {
   return (

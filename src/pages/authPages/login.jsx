@@ -119,7 +119,7 @@ const Login = () => {
             className={`w-full py-3 text-white font-semibold rounded-full ${
               isSigningIn
                 ? "bg-gray-300 cursor-not-allowed"
-                : "bg-primary hover:bg-indigo-800 shadow-lg transition duration-300"
+                : "bg-primary hover:bg-blue-800 shadow-lg transition duration-300"
             }`}
           >
             {isSigningIn ? "Signing In..." : "Log In"}

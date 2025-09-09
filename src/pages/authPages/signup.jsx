@@ -42,7 +42,7 @@ const Register = () => {
       {userLoggedIn && <Navigate to={'/home'} replace={true} />}
 
       <main className="w-full h-screen flex justify-center items-center">
-        <div className="w-full bg-white p-8 pt-2 px-24">
+        <div className="w-full bg-white p-8 pt-8 px-24">
           <h2 className="text-4xl font-bold text-center text-black mb-6">
             Create new account
           </h2>
@@ -147,7 +147,7 @@ const Register = () => {
               className={`w-full py-3 text-white text-lg font-medium rounded-full transition mt-4 ${
                 isRegistering
                   ? 'bg-gray-300 cursor-not-allowed'
-                  : 'bg-primary hover:bg-indigo-800'
+                  : 'bg-primary hover:bg-blue-800'
               }`}
             >
               {isRegistering ? 'Signing Up...' : 'Create Account'}

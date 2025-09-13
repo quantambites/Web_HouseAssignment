@@ -22,12 +22,31 @@ const Header = ({ profileActive, setProfileActive }) => {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex gap-6 text-sm absolute left-1/2 transform -translate-x-1/2">
-            <button onClick={() => navigate('/shop/home')}>Home</button>
-            <button onClick={() => navigate('/shop/buy')}>Buy</button>
-            <button onClick={() => navigate('/shop/rent')}>Rent</button>
-            <button onClick={() => navigate('/shop/sell')}>Sell</button>
-            <button onClick={() => navigate('/shop/about')}>About</button>
-            <button onClick={() => navigate('/shop/contact')}>Contact</button>
+
+            <button onClick={() => navigate('/shop/home')} className={location.pathname === '/shop/home'
+              ? 'border-b-1 border-primary text-primary '
+              : ''}>Home</button>
+
+            <button onClick={() => navigate('/shop/buy')} className={location.pathname === '/shop/buy'
+              ? 'border-b-1 border-primary text-primary '
+              : ''}>Buy</button>
+
+            <button onClick={() => navigate('/shop/rent')} className={location.pathname === '/shop/rent'
+              ? 'border-b-1 border-primary text-primary '
+              : ''}>Rent</button>
+
+            <button onClick={() => navigate('/shop/sell')}className={location.pathname === '/shop/sell'
+              ? 'border-b-1 border-primary text-primary '
+              : ''}>Sell</button>
+
+            <button onClick={() => navigate('/shop/about')} className={location.pathname === '/shop/about'
+              ? 'border-b-1 border-primary text-primary '
+              : ''}>About Us</button>
+
+            <button onClick={() => navigate('/shop/contact')} className={location.pathname === '/shop/contact'
+              ? 'border-b-1 border-primary text-primary '
+              : ''}>Contact Us</button>
+
           </nav>
 
           {/* Profile / Auth */}
